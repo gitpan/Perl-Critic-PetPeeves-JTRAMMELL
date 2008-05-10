@@ -1,0 +1,24 @@
+---
+name: Perl-Critic-PetPeeves-JTRAMMELL
+version: 0.01
+author:
+  - 'Holmescorp Software Dev Team <softwaredevelopment@holmescorp.com>'
+abstract: policies to prohibit/require my pet peeves
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Perl::Critic::Utils: 0
+build_requires:
+  Test::More: 0
+provides:
+  Perl::Critic::PetPeeves::JTRAMMELL:
+    file: lib/Perl/Critic/PetPeeves/JTRAMMELL.pm
+    version: 0.01
+  Perl::Critic::Policy::Variables::ProhibitUselessInitialization:
+    file: lib/Perl/Critic/Policy/Variables/ProhibitUselessInitialization.pm
+    version: 0.01
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
