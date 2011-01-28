@@ -6,10 +6,10 @@ Makefile.PL
 MANIFEST
 META.yml
 README
-t/00-load.t
-t/10-scalar.t
-t/11-array.t
+t/0load.t
+t/array.t
 t/boilerplate.t
 t/lib/PerlCriticTestUtils.pm
 t/pod-coverage.t
 t/pod.t
+t/scalar.t

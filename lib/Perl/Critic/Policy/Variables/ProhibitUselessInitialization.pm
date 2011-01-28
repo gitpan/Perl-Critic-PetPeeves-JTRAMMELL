@@ -1,12 +1,8 @@
-# $Id: ProhibitUselessInitialization.pm 27 2008-05-09 20:07:42Z johntrammell $
-# $URL: https://perlcritic-petpeeves-jtrammell.googlecode.com/svn/trunk/lib/Perl/Critic/Policy/Variables/ProhibitUselessInitialization.pm $
-
 package Perl::Critic::Policy::Variables::ProhibitUselessInitialization;
 
 use strict;
 use warnings;
 use base 'Perl::Critic::Policy';
-use Data::Dumper;
 use Perl::Critic::Utils ':severities';
 
 our $VERSION = '0.01';
@@ -110,14 +106,13 @@ Method to determine if the element currently under scrutiny violates this
 policy.  If it does, return a properly constructed C<Perl::Critic::Violation>
 object.  Otherwise, return C<undef>.
 
-
 =cut
 
 sub violates {
     my ($self, $elem, undef) = @_;
     if ($elem->type() eq 'my') {
         if (violates_scalar($elem) || violates_list($elem)) {
-            return $self->violation( desc(), expl(), $elem );
+            return $self->violation(desc(), expl(), $elem);
         }
     }
     return;
@@ -164,4 +159,3 @@ sub violates_list {
 }
 
 1;
-
